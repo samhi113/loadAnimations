@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Nav Project</title>
+    </head>
+    <body>
+        <input type="checkbox" name="navOpener" id="navOpener">
+        <label for="navOpener" class="navLabel">=</label>
+        <nav>
+            <ul>
+                <li><button>Menu 1</button></li>
+                <li><button>Menu 2</button></li>
+                <li>
+                    <button>Menu 3</button>
+                    <label for="submenu1Btn" class="submenuBtn">+</label>
+                </li>
+                <input type="checkbox" name="submenu1Btn" id="submenu1Btn">
+                <li id="submenu1">
+                    <ul>
+                        <li>
+                            Submenu 1
+                        </li>
+                        <li>
+                            Submenu 2
+                        </li>
+                        <li>
+                            Submenu 3
+                        </li>
+                    </ul>
+                </li>
+                <li><button>Menu 4</button></li>
+            </ul>
+        </nav>
+        
+        <input type="checkbox" name="fadeOpener" id="fadeOpener">
+        <div id="fade1"></div>
+        <img src="img/Asset 14.svg" id="fadeL"></img>
+        <img src="img/Asset 13.svg" id="fadeR"></img>
+        <h1 style="margin-top: 20vh;">Page 1</h1>
+        <script src="./js/app.js"></script> 
+    </body>
+</html>
