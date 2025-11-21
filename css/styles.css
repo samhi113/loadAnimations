@@ -1,0 +1,184 @@
+* {
+    transition: all 0.25s ease-in-out;
+    font-family: Industry, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+html, body {
+    background-color: #ddd;
+    color: #222;
+    margin: 0;
+    overflow-x: hidden;
+    height: fit-content;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+label.navLabel {
+    width: 10vw;
+    height: 10vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(10px);
+    background-color: #1177eeb0;
+    color: white;
+    font-size: calc(3vh + 3vw);
+    font-weight: bold;
+}
+
+nav {
+    --width: 25vw;
+
+    position: absolute;
+    top: 10vh;
+    left: calc(-1.25 * var(--width));
+    z-index: 99;
+    
+    display: flex;
+    width: var(--width);
+    backdrop-filter: blur(10px);
+
+    transition-duration: 1s !important;
+}
+
+#navOpener:checked ~ nav {
+    left: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul, nav ul li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+}
+
+nav ul li {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #000000b0;
+}
+
+nav ul li:hover {
+    z-index: 2;
+    background-color: #000000d0;
+    box-shadow: 0px 4px 4px #00000040, 0px -4px 4px #00000040;
+}
+
+nav ul li a {
+    width: calc(25vw - 5vh);
+    height: 5vh;
+    padding-left: 0.5vw;
+
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+}
+
+#submenu1 {
+    display: none;
+    height: 0;
+}
+
+#submenu1Btn:checked ~ #submenu1 {
+    display: flex;
+    height: fit-content;
+}
+
+#submenu1 ul li {
+    --padding-left: 2vw;
+    width: calc(25vw - var(--padding-left));
+    padding-left: var(--padding-left);
+
+    background-color: #ffffffb0;
+    color: #000;
+}
+
+#submenu1 ul li:hover {
+    background-color: #ffffffd0;
+}
+
+.submenuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    aspect-ratio: 1;
+
+    background-color: white;
+}
+
+/* #fade1 {
+    position: fixed;
+    top: -150vh;
+    left: -150vw;
+    z-index: 98;
+
+    width: 400vw;
+    height: 400vh;
+    
+    background-color: #900;
+    clip-path: polygon(75% 0, 50% 50%, 50% 50%, 50% 50%, 25% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+    transition-duration: 1s;
+}
+
+#fadeOpener:checked ~ #fade1 {
+    clip-path: polygon(200vw 0, calc(200vw - 200vh) 200vh, 200vw 400vh, calc(200vw + 200vh) 200vh, 200vw 0, 400vw 0, 400vw 400vh, 0 400vh, 0 0);
+} */
+
+#fadeL, #fadeR {
+    width: 150vw;
+    height: 300vh;
+
+    object-fit: cover;
+
+    position: absolute;
+    top: -100vh;
+    z-index: 99;
+    transition-duration: 1s;
+}
+
+#fadeL {
+    left: -15.625vw;
+    object-position: center right;
+}
+
+#fadeR {
+    left: -34.375vw;
+    object-position: center left;
+}
+
+#fadeOpener:checked ~ #fadeL {
+    left: -100vw;
+    z-index: -99;
+}
+
+#fadeOpener:checked ~ #fadeR {
+    left: 50vw;
+    z-index: -1;
+}
