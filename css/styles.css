@@ -133,52 +133,40 @@ nav ul li a {
     background-color: white;
 }
 
-/* #fade1 {
-    position: fixed;
-    top: -150vh;
-    left: -150vw;
-    z-index: 98;
+#fade1 {
+    --fadeScale: 3.5;
 
-    width: 400vw;
-    height: 400vh;
+    position: absolute;
+    top: calc(50vh - var(--fadeScale) * 50vh);
+    left: calc(50vw - var(--fadeScale) * 50vw);
+    z-index: 99;
+
+    width: calc(var(--fadeScale) * 100vw);
+    height: calc(var(--fadeScale) * 100vh);
     
     background-color: #900;
-    clip-path: polygon(75% 0, 50% 50%, 50% 50%, 50% 50%, 25% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% calc((var(--fadeScale) * 50vh) - 14.142vw), calc((var(--fadeScale) * 50vw) - 14.142vw) 50%, 50% calc((var(--fadeScale) * 50vh) + 14.142vw), calc((var(--fadeScale) * 50vw) + 14.142vw) 50%, 50% calc((var(--fadeScale) * 50vh) - 14.142vw), 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);
     transition-duration: 1s;
 }
 
 #fadeOpener:checked ~ #fade1 {
-    clip-path: polygon(200vw 0, calc(200vw - 200vh) 200vh, 200vw 400vh, calc(200vw + 200vh) 200vh, 200vw 0, 400vw 0, 400vw 400vh, 0 400vh, 0 0);
-} */
+    clip-path: polygon(50% 0, calc((var(--fadeScale) * 50vw) - 84.375vw) 50%, 50% 100%, calc((var(--fadeScale) * 50vw) + 84.375vw) 50%, 50% 0, 50% 10vw, calc((var(--fadeScale) * 50vw) + 74.375vw) 50%,  50% calc((var(--fadeScale) * 100vh) - 10vw), calc((var(--fadeScale) * 50vw) - 74.375vw) 50%, 50% 10vw);
+}
 
-#fadeL, #fadeR {
-    width: 150vw;
-    height: 300vh;
-
-    object-fit: cover;
-
+#fade2 {
     position: absolute;
-    top: -100vh;
-    z-index: 99;
+    top: calc(50vh - var(--fadeScale) * 50vh);
+    left: calc(50vw - var(--fadeScale) * 50vw);
+    z-index: 98;
+
+    width: calc(var(--fadeScale) * 100vw);
+    height: calc(var(--fadeScale) * 100vh);
+    
+    background-color: #229;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 0, 50% calc((var(--fadeScale) * 50vh) - 10vw), calc((var(--fadeScale) * 50vw) + 10vw) 50%, 50% calc((var(--fadeScale) * 50vh) + 10vw), calc((var(--fadeScale) * 50vw) - 10vw) 50%, 50% calc((var(--fadeScale) * 50vh) - 10vw), 50% 0);
     transition-duration: 1s;
 }
 
-#fadeL {
-    left: -15.625vw;
-    object-position: center right;
-}
-
-#fadeR {
-    left: -34.375vw;
-    object-position: center left;
-}
-
-#fadeOpener:checked ~ #fadeL {
-    left: -100vw;
-    z-index: -99;
-}
-
-#fadeOpener:checked ~ #fadeR {
-    left: 50vw;
-    z-index: -1;
+#fadeOpener:checked ~ #fade2 {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 0, 50% 0, calc((var(--fadeScale) * 50vw) + 80vw) 50%, 50% 100%, calc((var(--fadeScale) * 50vw) - 80vw) 50%, 50% 0, 50% 0);
 }
