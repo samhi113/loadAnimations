@@ -146,7 +146,9 @@ nav ul li a {
   width: calc(var(--fadeScale) * 100vw);
   height: calc(var(--fadeScale) * 100vh);
 
-  background-color: #900;
+  background-image: url("../img/WDDABackground.svg");
+  background-size: cover;
+  background-position: center;
   clip-path: polygon(50% calc((var(--fadeScale) * 50vh) - 14.142vw), calc((var(--fadeScale) * 50vw) - 14.142vw) 50%, 50% calc((var(--fadeScale) * 50vh) + 14.142vw), calc((var(--fadeScale) * 50vw) + 14.142vw) 50%, 50% calc((var(--fadeScale) * 50vh) - 14.142vw), 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);
   transition-duration: 1s;
 }
