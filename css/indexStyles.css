@@ -30,12 +30,6 @@ body {
   transform: rotateX(10deg);
 }
 
-#lrSec img {
-  margin: -0.575vw;
-  clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%);
-  transition: all 0s linear;
-}
-
 #left {
   transform: rotateY(25deg);
   object-position: center left;
@@ -51,6 +45,9 @@ body {
   height: 20vw;
 
   object-fit: cover;
+
+  margin: -0.575vw;
+  transition: all 0s linear;
 }
 
 h2 {
