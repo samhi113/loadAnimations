@@ -1,3 +1,5 @@
+const left = document.getElementById("left");
+const right = document.getElementById("right");
 const text = document.querySelector("h2");
 const gif = document.getElementById("loading");
 
@@ -9,6 +11,15 @@ window.onload = async function() {
   var waitTime = (Math.random() * 3000) + 4500;
   console.log(waitTime);
   await delay(waitTime);
+
+  left.setAttribute("src", "img/WDDACenter.svg");
+  right.setAttribute("src", "img/WDDACenter.svg");
+
+  left.style.width = "10vw";
+  right.style.width = "10vw";
+
+  left.style.clipPath = "polygon(100% 0%, 0 50%, 0 50%, 100% 100%);"
+  right.style.clipPath = "polygon(100% 50%, 0 0, 0 100%, 100% 50%);"
 
   text.style.display = "none";
   gif.style.display = "none";
