@@ -1,0 +1,73 @@
+body,
+html {
+  background-color: #000;
+  color: #fff;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  perspective: 100vw;
+  overflow: hidden;
+}
+
+#lrSec {
+  display: flex;
+  align-items: center;
+  transform: rotateX(10deg);
+}
+
+#left {
+  margin: -0.575vw;
+  transform: rotateY(25deg);
+  object-position: center left;
+}
+
+#right {
+  margin: -0.575vw;
+  transform: rotateY(335deg);
+  object-position: center right;
+}
+
+.siteLogo {
+  width: 11.4vw;
+  height: 20vw;
+
+  object-fit: cover;
+}
+
+h2 {
+  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-size: calc(2vh + 2vw);
+  transform: skew(165deg);
+}
+
+#cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+
+  width: 100vw;
+  height: 100vh;
+
+  backdrop-filter: blur(1px);
+  background-image: url(../img/frame.png);
+  background-size: 100% 100%;
+}
+
+#loading {
+  opacity: 0;
+  width: 20vw;
+  image-rendering: pixelated;
+}

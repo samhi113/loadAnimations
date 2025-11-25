@@ -1,0 +1,21 @@
+{
+  "name": "loadanimations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samhi113/loadAnimations.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/samhi113/loadAnimations/issues"
+  },
+  "homepage": "https://github.com/samhi113/loadAnimations#readme"
+}
