@@ -12,21 +12,20 @@ window.onload = async function() {
   console.log(waitTime);
   await delay(waitTime);
 
-  left.setAttribute("src", "img/WDDACenter.svg");
-  right.setAttribute("src", "img/WDDACenter.svg");
-
-  left.style.width = "10vw";
-  right.style.width = "10vw";
-
-  left.style.clipPath = "polygon(100% 0%, 0 50%, 0 50%, 100% 100%);"
-  right.style.clipPath = "polygon(100% 50%, 0 0, 0 100%, 100% 50%);"
-
+  left.style.display = "none";
+  right.style.display = "none";
   text.style.display = "none";
   gif.style.display = "none";
 
   waitTime = (Math.random() * 1000) + 2000;
   console.log(waitTime);
   await delay(waitTime);
+
+  left.setAttribute("src", "img/WDDACenter.svg");
+
+  left.style.display = "block";
+  left.style.width = "30vw";
+  left.style.height = "30vw";
 
   document.querySelector("body").style.backgroundColor = "#ddd";
   await delay(2001);
